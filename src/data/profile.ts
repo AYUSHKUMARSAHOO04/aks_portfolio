@@ -5,7 +5,7 @@ const phone = "+91-9337753561";
 const cleanPhone = "+919337753561";
 const linkedin = "https://www.linkedin.com/in/ayush-kumar-sahoo-33b555253/";
 const github = "https://github.com/AYUSHKUMARSAHOO04";
-const resumeUrl = "https://drive.google.com/file/d/12SCRxcE61Iin-qmUr7qWe0D_FrII7Nll/view?usp=drivesdk";
+const resumeUrl = "https://drive.google.com/file/d/18O-a2p2lBNO9f2UcqWzM8RBLZaMFRd3n/view?usp=drivesdk";
 
 export const profileData: Profile = {
   name: "Ayush Kumar Sahoo",
