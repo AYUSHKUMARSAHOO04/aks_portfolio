@@ -1,4 +1,4 @@
-# Ayush Kumar Sahoo — Personal Portfolio Website
+# Ayush Kumar Sahoo : Personal Portfolio Website
 **Data Analyst | Product Analytics | Business Intelligence Professional**
 
 A high-end editorial portfolio website built from scratch with React, TypeScript, Vite, TailwindCSS, and Framer Motion. Features GPU-friendly fluid portrait displacement, interactive retention cohort heatmaps, conversion funnel diagnostics, SQL inspectors, and a 100% decoupled data-driven architecture.
