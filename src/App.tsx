@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Navbar } from './components/layout/Navbar';
 import { Hero } from './components/hero/Hero';
 import { PositioningSection } from './components/sections/PositioningSection';
@@ -11,14 +12,38 @@ import { Footer } from './components/layout/Footer';
 import { MarqueeTicker } from './components/ui/MarqueeTicker';
 
 export function App() {
+  useEffect(() => {
+    // Prevent the browser from restoring the previous scroll position
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+
+    // Always start from the top when the website loads
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant',
+    });
+
+    // Additional fallback to ensure the page starts at the top
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+
+    return () => {
+      if ('scrollRestoration' in window.history) {
+        window.history.scrollRestoration = 'auto';
+      }
+    };
+  }, []);
+
   const tickerItems = [
-    "DATA INTO DECISIONS",
-    "PRODUCT ANALYTICS",
-    "BEHAVIORAL COHORTS",
-    "FUNNEL OPTIMIZATION",
-    "LAUNCHIQ.AI",
-    "BUSINESS INTELLIGENCE",
-    "DECISION SCIENCE",
+    'DATA INTO DECISIONS',
+    'PRODUCT ANALYTICS',
+    'BEHAVIORAL COHORTS',
+    'FUNNEL OPTIMIZATION',
+    'LAUNCHIQ.AI',
+    'BUSINESS INTELLIGENCE',
+    'DECISION SCIENCE',
   ];
 
   return (
@@ -46,7 +71,11 @@ export function App() {
         <SelectedWorkSection />
 
         {/* Inverted Ticker Ribbon */}
-        <MarqueeTicker items={tickerItems} direction="right" inverted />
+        <MarqueeTicker
+          items={tickerItems}
+          direction="right"
+          inverted
+        />
 
         {/* 05: Analytics Toolkit */}
         <AnalyticsToolkit />
